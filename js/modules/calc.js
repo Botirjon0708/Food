@@ -1,6 +1,4 @@
 function calc() {
-  // Calc
-
   const result = document.querySelector(".calculating__result span");
   let sex, height, weight, age, ratio;
 
@@ -69,11 +67,9 @@ function calc() {
           sex = e.target.getAttribute("id");
           localStorage.setItem("sex", e.target.getAttribute("id"));
         }
-
         elements.forEach((elem) => {
           elem.classList.remove(activeClass);
         });
-
         e.target.classList.add(activeClass);
 
         calcTotal();
@@ -117,4 +113,4 @@ function calc() {
   getDynamicInformation("#age");
 }
 
-module.exports = calc;
+export default calc;
